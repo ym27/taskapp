@@ -9,12 +9,13 @@ import UIKit
 import RealmSwift
 
 class inputViewController: UIViewController {
+    @IBOutlet weak var categoryTextField: UITextField!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentsTextView: UITextView!
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    let realm = try! Realm()    // 追加する
-    var task: Task!   // 追加する
+    let realm = try! Realm()
+    var task: Task!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,15 +23,16 @@ class inputViewController: UIViewController {
         // 背景をタップしたらdismissKeyboardメソッドを呼ぶように設定する
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target:self, action:#selector(dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
-
+        
+        categoryTextField.text = task.category
         titleTextField.text = task.title
         contentsTextView.text = task.contents
         datePicker.date = task.date
     }
     
-    // 追加する
     override func viewWillDisappear(_ animated: Bool) {
         try! realm.write {
+            self.task.category = self.categoryTextField.text!
             self.task.title = self.titleTextField.text!
             self.task.contents = self.contentsTextView.text
             self.task.date = self.datePicker.date
@@ -39,7 +41,7 @@ class inputViewController: UIViewController {
         super.viewWillDisappear(animated)
     }
     
-    // タスクのローカル通知を登録する --- ここから ---
+    // タスクのローカル通知を登録する
     func setNotification(task: Task) {
         let content = UNMutableNotificationContent()
         // タイトルと内容を設定(中身がない場合メッセージ無しで音だけの通知になるので「(xxなし)」を表示する)
@@ -77,20 +79,12 @@ class inputViewController: UIViewController {
                 print("---------------/")
             }
         }
-    } // --- ここまで追加 ---
+    }
     
     @objc func dismissKeyboard(){
         // キーボードを閉じる
         view.endEditing(true)
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
