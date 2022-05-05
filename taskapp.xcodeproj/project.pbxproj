@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0287257742E55D3D2BED969A /* Pods_taskapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE3EE4CDE8BD1A986BB6154 /* Pods_taskapp.framework */; };
 		A077C0792815557B0088F20A /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077C0782815557B0088F20A /* Task.swift */; };
+		A077C07B281B90CC0088F20A /* inputcategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077C07A281B90CC0088F20A /* inputcategoryViewController.swift */; };
+		A077C07D281B961D0088F20A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = A077C07C281B961D0088F20A /* Category.swift */; };
 		A0E6B51F280D8F8E00E17170 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E6B51E280D8F8E00E17170 /* AppDelegate.swift */; };
 		A0E6B521280D8F8E00E17170 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E6B520280D8F8E00E17170 /* SceneDelegate.swift */; };
 		A0E6B523280D8F8E00E17170 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E6B522280D8F8E00E17170 /* ViewController.swift */; };
@@ -20,6 +22,8 @@
 
 /* Begin PBXFileReference section */
 		A077C0782815557B0088F20A /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = SOURCE_ROOT; };
+		A077C07A281B90CC0088F20A /* inputcategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputcategoryViewController.swift; sourceTree = "<group>"; };
+		A077C07C281B961D0088F20A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		A0E6B51B280D8F8E00E17170 /* taskapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taskapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0E6B51E280D8F8E00E17170 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0E6B520280D8F8E00E17170 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,11 +81,13 @@
 			isa = PBXGroup;
 			children = (
 				A077C0782815557B0088F20A /* Task.swift */,
+				A077C07C281B961D0088F20A /* Category.swift */,
 				A0E6B51E280D8F8E00E17170 /* AppDelegate.swift */,
 				A0E6B520280D8F8E00E17170 /* SceneDelegate.swift */,
 				A0E6B522280D8F8E00E17170 /* ViewController.swift */,
 				A0E6B532280DC02200E17170 /* inputViewController.swift */,
 				A0E6B524280D8F8E00E17170 /* Main.storyboard */,
+				A077C07A281B90CC0088F20A /* inputcategoryViewController.swift */,
 				A0E6B527280D8F8F00E17170 /* Assets.xcassets */,
 				A0E6B529280D8F8F00E17170 /* LaunchScreen.storyboard */,
 				A0E6B52C280D8F8F00E17170 /* Info.plist */,
@@ -215,8 +221,10 @@
 				A0E6B523280D8F8E00E17170 /* ViewController.swift in Sources */,
 				A0E6B51F280D8F8E00E17170 /* AppDelegate.swift in Sources */,
 				A077C0792815557B0088F20A /* Task.swift in Sources */,
+				A077C07B281B90CC0088F20A /* inputcategoryViewController.swift in Sources */,
 				A0E6B521280D8F8E00E17170 /* SceneDelegate.swift in Sources */,
 				A0E6B533280DC02200E17170 /* inputViewController.swift in Sources */,
+				A077C07D281B961D0088F20A /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
